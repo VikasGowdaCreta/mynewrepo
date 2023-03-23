@@ -1,0 +1,8 @@
+name: first-actions
+  on: push
+jobs: 
+  Test: 
+    runs-on: ubuntu-latest
+    steps:
+     -name: sayhello
+      run: echo"hello world"
