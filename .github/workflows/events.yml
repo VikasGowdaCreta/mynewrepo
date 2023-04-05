@@ -1,0 +1,16 @@
+name: WorkFlow Events
+on: push
+jobs:
+   deploy:
+    runs-on: Ubuntu
+     steps:
+     -name: get code
+      uses: actions/checkout@v3
+     -name: Install Dependencies
+      run: npm ci
+     -name: Test Code
+      run: npm run code
+     -name: Build Code
+      run: npm build code
+     -name: deploying code
+      run: echo "deploying..."
